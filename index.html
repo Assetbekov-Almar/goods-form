@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+	<title>Add Keys Form</title>
+</head>
+<body>
+	<div class="success-message alert alert-success d-none" role="alert">
+		Данные успешно отправлены на сервер
+	</div>
+<form action="some_php_file.php" class="needs-validation" novalidate id="add-keys-form"  method="POST">
+<div class="add-keys-data">
+	<div class="add-keys-data-details">
+		<div class="position-city-details">
+
+			<div class="add-keys-item input-details">
+				<label for="item">Позиция:</label>
+				<select class="form-control" name="item" id="item" required>
+					<option selected disabled value="">Выберите...</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+				<div class="invalid-feedback">
+					Выберите позицию, пожалуйста.
+				</div>
+			</div>
+
+			<div class="add-keys-city input-details">
+				<label for="city">Город:</label>
+				<select class="form-control" name="city" id="city" required>
+					<option selected disabled value="">Выберите...</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+				<div class="invalid-feedback">
+					Выберите город, пожалуйста.
+				</div>
+			</div>
+
+		</div>
+
+		<ol class="ol-details-section">
+			<div class="ol-details-subsection border border-primary rounded" data-form-section-id="1">
+				<li>
+					<div class="section-delete">
+						<input class="section-delete-btn" type="button" value="X">	
+					</div>
+
+					<div class="add-keys-description input-details">
+						<label for="description[1]">Описание:</label>
+						<textarea class="form-control description input-values" name="description[1]" id="description[1]" rows="2" required></textarea>
+						<div class="invalid-feedback">
+							Укажите описание, пожалуйста.
+						</div>
+					</div>
+
+					<div class="add-keys-index input-details">
+						<label for="index[1]">Индекс:</label>
+						<input type="number" class="form-control index input-values" name="index[1]" id="index[1]" required>
+						<div class="invalid-feedback">
+							Укажите индекс, пожалуйста.
+						</div>
+					</div>
+
+					<div class="add-keys-image input-details">
+						<label for="image[1]">Фото, до 5 шт.</label>
+						<div class="custom-file">
+							<input type="file" class="form-control-file input-files input-values custom-file-input" name="image[1]" id="image[1]" multiple="multiple"  accept="image/jpg, image/jpeg, image/png" required>
+							<label class="custom-file-label" for="image[1]">Choose file</label>
+							<div class="invalid-feedback invalid-photo-upload d-none">
+								Загрузите фото, пожалуйста.
+							</div>
+							<div class="invalid-feedback invalid-max-files d-none">
+								Вы можете загружать максимум 5 файлов в каждой секции.
+							</div>
+						</div>
+						<div class="images-list"></div>
+					</div>
+					
+					<div class="add-keys-note input-details">
+						<label for="note[1]">Заметка:</label>
+						<input type="text" class="form-control input-values" name="note[1]" id="note[1]"> 
+					</div>
+	
+				</li>		
+			</div>
+		</ol>
+
+		<div class="add-section">
+			<input type="button" class="btn btn-secondary btn-sm add-form-section-btn" value="+">	
+		</div>
+
+	</div>
+</div>
+
+<div class="total-files-size-indicator">
+	<label for="progress-bar">Общий размер загруженных фото:</label>
+	<div class="progress">
+		<div class="progress-bar progress-bar-info" id="progress-bar" role="progressbar" style="width:0%">
+			50%
+		</div>	
+	</div>
+</div>
+
+<div class="submit-form-section">
+	<input class="btn btn-primary btn-lg submit-btn" type="submit" value="Submit">
+</div>
+
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+

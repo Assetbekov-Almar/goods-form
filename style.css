@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+*,*:before,*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html {
+	font-family: "Open Sans", sans-serif;
+}
+
+#add-keys-form {
+	width: 820px;
+	margin: auto;
+}
+
+.add-keys-data {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.add-keys-data-details {
+	width: 100%;
+}
+
+.position-city-details {
+	margin: 0 200px;
+}
+
+.ol-details-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.ol-details-subsection {
+	width: 40%;
+	margin: 14px 17px;
+	position: relative;
+}
+
+#add-keys-form .new-section-loading,
+#add-keys-form .form-loading {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.add-keys-data-details label {
+	font-weight: 600;
+}
+
+.add-keys-data-details .input-details {
+	padding: 8px;
+	margin: 9px 0;
+	text-align: left;
+}
+
+.add-keys-data-details .description {
+	resize: vertical;
+	min-height: 50px;
+	max-height: 100px;
+}
+
+.add-keys-data-details .images-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.ol-details-subsection .uploaded-image {
+	width: 33.33%;
+	padding: 5px;
+	position: relative;
+}
+
+.ol-details-subsection .image-preview {
+	width: 100%;
+	height: 90px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ol-details-subsection .image-name {
+	width: 100%;
+	margin-top: 3px;
+	font-size: 13px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+}
+
+.ol-details-subsection .image-size {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background-color: rgb(201, 199, 199);
+	font-size: 11px;
+	font-weight: 700;
+	padding: 2px;
+}
+
+.ol-details-subsection .invalid-photo-upload,
+.ol-details-subsection .invalid-max-files {
+	display: block;
+}
+
+.ol-details-subsection .image-delete-btn,
+.add-keys-data-details .section-delete-btn {
+	display: none;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	background-color: transparent;
+	border-style: none;
+	color:	rgb(248, 26, 26);
+	font-weight: 700;
+}
+
+.ol-details-subsection:hover .section-delete-btn {
+	display: block;
+}
+
+.uploaded-image:hover > .image-delete-btn {
+	display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+#add-keys-form .add-section {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.total-files-size-indicator {
+	text-align: center;
+	margin: 0 250px 10px;
+}
+
+.total-files-size-indicator label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.submit-form-section {
+	min-width: 100%;
+}
+
+.submit-form-section input {
+	display: block;
+	margin: auto;
+}
+
+.success-message {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+}
+
+.ol-details-section .images-list .image-preview.invalid-image-size,
+.ol-details-section .images-list .image-preview.invalid-image-size ~.image-size,
+.ol-details-section .images-list .image-preview.invalid-image-sides-ratio,
+.ol-details-section .images-list .image-preview.invalid-image-sides-ratio ~.image-size {
+	border: 2px solid rgb(248, 26, 26);
+	color: rgb(248, 26, 26);
+}
